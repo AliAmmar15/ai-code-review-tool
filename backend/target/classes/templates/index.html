@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Home Page</title>
+    <title>Dashboard</title>
 </head>
 <body>
-<h1>Welcome to the AI Powered Code Review Tool</h1>
+    <h2>Welcome to the AI-Powered Code Review Tool!</h2>
+    <p>You are logged in.</p>
+    
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
 </body>
 </html>
