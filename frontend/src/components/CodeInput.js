@@ -8,11 +8,14 @@ function CodeInput() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8081/api/code-review/analyze", code, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const response = await axios.post(
+        "http://localhost:8081/api/code-review",
+        { code }, // Send code as an object, not a string
+        { headers: { "Content-Type": "application/json" } }
+      );
 
-      setFeedback(response.data); // OpenAI response is directly returned as a string
+      // Ensure feedback is always a string
+      setFeedback(typeof response.data === "string" ? response.data : JSON.stringify(response.data, null, 2));
     } catch (error) {
       console.error("Error submitting code:", error);
       setFeedback("An error occurred while analyzing the code.");
