@@ -10,12 +10,15 @@ function CodeInput() {
     try {
       const response = await axios.post(
         "http://localhost:8081/api/code-review",
-        { code }, // Send code as an object, not a string
-        { headers: { "Content-Type": "application/json" } }
+        { code }, // Send as an object
+        {
+          headers: { "Content-Type": "application/json" },
+        }
       );
 
-      // Ensure feedback is always a string
-      setFeedback(typeof response.data === "string" ? response.data : JSON.stringify(response.data, null, 2));
+      // Extract the AI-generated content from the response
+      const messageContent = response.data.choices[0]?.message?.content || "No feedback received.";
+      setFeedback(messageContent);
     } catch (error) {
       console.error("Error submitting code:", error);
       setFeedback("An error occurred while analyzing the code.");
