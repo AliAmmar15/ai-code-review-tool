@@ -12,7 +12,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/", "/index", "/login", "/register", "/css/**", "/js/**").permitAll() // Allow public pages
+            .requestMatchers("/login", "/register", "/api/code-review", "/css/**", "/js/**").permitAll() // Allow public pages
                 .anyRequest().authenticated() // Protect other routes
             )
             .formLogin(form -> form

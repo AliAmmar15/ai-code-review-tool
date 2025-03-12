@@ -8,15 +8,20 @@ function CodeInput() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/api/code-review", { code });
-      setFeedback(response.data.feedback);
+      const response = await axios.post("http://localhost:8081/api/code-review/analyze", code, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      setFeedback(response.data); // OpenAI response is directly returned as a string
     } catch (error) {
       console.error("Error submitting code:", error);
+      setFeedback("An error occurred while analyzing the code.");
     }
   };
 
   return (
     <div>
+      <h2>Code Review</h2>
       <form onSubmit={handleSubmit}>
         <textarea
           rows="10"
@@ -30,7 +35,7 @@ function CodeInput() {
       </form>
       {feedback && (
         <div>
-          <h2>Feedback</h2>
+          <h2>AI Feedback</h2>
           <pre>{feedback}</pre>
         </div>
       )}

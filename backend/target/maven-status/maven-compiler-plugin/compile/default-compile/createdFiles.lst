@@ -1,3 +1,5 @@
+com/yourteamname/aipoweredcodereview/service/OpenAiService.class
 com/yourteamname/aipoweredcodereview/config/WebSecurityConfig.class
+com/yourteamname/aipoweredcodereview/controller/CodeAnalysisController.class
 com/yourteamname/aipoweredcodereview/controller/HomeController.class
 com/yourteamname/aipoweredcodereview/AiPoweredCodeReviewApplication.class
