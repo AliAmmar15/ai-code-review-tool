@@ -13,5 +13,8 @@ public class AiPoweredCodeReviewApplication {
         System.setProperty("openai.api.key", dotenv.get("OPENAI_API_KEY"));
 
         SpringApplication.run(AiPoweredCodeReviewApplication.class, args);
+
+        System.out.println("Loaded API Key: " + System.getenv("OPENAI_API_KEY"));
+
     }
 }
