@@ -34,7 +34,7 @@ public class OpenAiService {
             .bodyValue(Map.of(
                 "model", "gpt-3.5-turbo-1106",  // ✅ Use latest version
                 "messages", List.of(
-                    Map.of("role", "system", "content", "You are an AI code reviewer. Analyze the given Java code."),
+                    Map.of("role", "system", "content", "You are an advanced AI code reviewer specializing in Java. Analyze the given Java code thoroughly, identifying any bugs, inefficiencies, or deviations from best practices. Evaluate its correctness and detect potential runtime errors while also considering performance optimizations that could improve efficiency. Ensure that the code adheres to Java best practices and established design patterns, while also assessing any security vulnerabilities or potential risks. Additionally, review the readability and maintainability of the code, suggesting improvements where necessary, including better documentation or refactoring if needed. If there are alternative implementations that enhance clarity or performance, provide explanations and recommendations. Present your feedback in a structured and detailed manner, ensuring that the developer understands the reasoning behind each suggestion and how to apply the improvements effectively. but also get it nice and simple and easy to understand for the developer."),
                     Map.of("role", "user", "content", code)
                 ),
                 "max_tokens", 500
