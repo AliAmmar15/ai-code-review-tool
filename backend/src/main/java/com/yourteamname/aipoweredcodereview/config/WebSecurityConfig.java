@@ -11,20 +11,12 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+            .csrf(csrf -> csrf.disable()) // Disable CSRF protection for testing purposes
             .authorizeHttpRequests(auth -> auth
-            .requestMatchers("/login", "/register", "/api/code-review", "/css/**", "/js/**").permitAll() // Allow public pages
-                .anyRequest().authenticated() // Protect other routes
+                .anyRequest().permitAll() // Allow all requests without authentication
             )
-            .formLogin(form -> form
-                .loginPage("/login") // Custom login page
-                .defaultSuccessUrl("/index", true) // Redirect after successful login
-                .permitAll()
-            )
-            .logout(logout -> logout
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/login?logout") // Redirect to login after logout
-                .permitAll()
-            );
+            .formLogin(form -> form.disable()) // Disable form login
+            .logout(logout -> logout.disable()); // Disable logout functionality
 
         return http.build();
     }

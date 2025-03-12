@@ -1,7 +1,14 @@
 package com.yourteamname.aipoweredcodereview.controller;
 
+import java.util.Map;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping; // ✅ Fix Import
+import org.springframework.web.bind.annotation.RequestBody; // ✅ Fix Import
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.yourteamname.aipoweredcodereview.service.OpenAiService;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -14,7 +21,9 @@ public class CodeAnalysisController {
     }
 
     @PostMapping("/code-review")
-    public String analyzeCode(@RequestBody String code) {
-        return openAiService.analyzeCode(code).block(); // Fix: Ensure it's a Mono<String>
+    public ResponseEntity<String> analyzeCode(@RequestBody Map<String, String> request) {
+        String code = request.get("code"); // Extract code from JSON
+        String feedback = openAiService.analyzeCode(code).block(); // Ensure this returns a String
+        return ResponseEntity.ok(feedback);
     }
 }
