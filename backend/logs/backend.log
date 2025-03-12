@@ -4748,3 +4748,471 @@ This generated password is for development use only. Your security configuration
 2025-03-12T18:17:54.116-04:00 DEBUG 87003 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
 2025-03-12T18:17:54.117-04:00 DEBUG 87003 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Mar 12 18:17:54 EDT 2025, status=404, error=Not Found, path=/api/code-review/analyze}]
 2025-03-12T18:17:54.137-04:00 DEBUG 87003 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-03-12T18:32:22.904-04:00  INFO 96937 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Starting AiPoweredCodeReviewApplication using Java 17.0.14 with PID 96937 (/Users/aliammar/Desktop/ai-code-review-tool/backend/target/classes started by aliammar in /Users/aliammar/Desktop/ai-code-review-tool/backend)
+2025-03-12T18:32:22.906-04:00  INFO 96937 --- [main] c.y.a.AiPoweredCodeReviewApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-03-12T18:32:23.290-04:00  INFO 96937 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12T18:32:23.304-04:00  INFO 96937 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-03-12T18:32:23.698-04:00  INFO 96937 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-12T18:32:23.707-04:00  INFO 96937 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-12T18:32:23.708-04:00  INFO 96937 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-03-12T18:32:23.759-04:00  INFO 96937 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-12T18:32:23.759-04:00  INFO 96937 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 824 ms
+2025-03-12T18:32:23.817-04:00  INFO 96937 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-12T18:32:24.076-04:00  INFO 96937 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f3c0399
+2025-03-12T18:32:24.077-04:00  INFO 96937 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-12T18:32:24.128-04:00  INFO 96937 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12T18:32:24.169-04:00  INFO 96937 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-03-12T18:32:24.176-04:00  INFO 96937 --- [main] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2025-03-12T18:32:24.195-04:00  INFO 96937 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-12T18:32:24.326-04:00  WARN 96937 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12T18:32:24.341-04:00  INFO 96937 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:32:24.438-04:00  INFO 96937 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12T18:32:24.450-04:00  INFO 96937 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:32:24.541-04:00  INFO 96937 --- [main] org.hibernate.spatial                    : HHH80000004: hibernate-spatial adding function contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:32:24.651-04:00  INFO 96937 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12T18:32:24.654-04:00  INFO 96937 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T18:32:24.787-04:00 ERROR 96937 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-03-12T18:32:24.877-04:00  WARN 96937 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12T18:32:24.898-04:00  WARN 96937 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 31390d1a-4744-40d6-9708-12bbe3c40547
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-12T18:32:24.949-04:00  INFO 96937 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-03-12T18:32:24.980-04:00 DEBUG 96937 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2025-03-12T18:32:25.001-04:00 DEBUG 96937 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-12T18:32:25.049-04:00  INFO 96937 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6ed7c178, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c382179, org.springframework.security.web.context.SecurityContextHolderFilter@113a6636, org.springframework.security.web.header.HeaderWriterFilter@39296cef, org.springframework.web.filter.CorsFilter@5b657342, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7bad18f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4407fea2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15a2fddd, org.springframework.security.web.access.ExceptionTranslationFilter@232b3b4c, org.springframework.security.web.access.intercept.AuthorizationFilter@6885f3f7]
+2025-03-12T18:32:25.085-04:00 DEBUG 96937 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-12T18:32:25.103-04:00 DEBUG 96937 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-12T18:32:27.289-04:00  WARN 96937 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-12T18:32:27.294-04:00  INFO 96937 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T18:32:27.299-04:00  INFO 96937 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-12T18:32:27.308-04:00  INFO 96937 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-12T18:32:27.322-04:00  INFO 96937 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-12T18:32:27.331-04:00 ERROR 96937 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-03-12T18:32:51.978-04:00  INFO 97305 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Starting AiPoweredCodeReviewApplication using Java 17.0.14 with PID 97305 (/Users/aliammar/Desktop/ai-code-review-tool/backend/target/classes started by aliammar in /Users/aliammar/Desktop/ai-code-review-tool/backend)
+2025-03-12T18:32:51.980-04:00  INFO 97305 --- [main] c.y.a.AiPoweredCodeReviewApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-03-12T18:32:52.335-04:00  INFO 97305 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12T18:32:52.347-04:00  INFO 97305 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-03-12T18:32:52.722-04:00  INFO 97305 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-12T18:32:52.729-04:00  INFO 97305 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-12T18:32:52.729-04:00  INFO 97305 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-03-12T18:32:52.775-04:00  INFO 97305 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-12T18:32:52.775-04:00  INFO 97305 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 766 ms
+2025-03-12T18:32:52.835-04:00  INFO 97305 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-12T18:32:53.025-04:00  INFO 97305 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53dd42d6
+2025-03-12T18:32:53.029-04:00  INFO 97305 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-12T18:32:53.079-04:00  INFO 97305 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12T18:32:53.148-04:00  INFO 97305 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-03-12T18:32:53.156-04:00  INFO 97305 --- [main] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2025-03-12T18:32:53.173-04:00  INFO 97305 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-12T18:32:53.278-04:00  WARN 97305 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12T18:32:53.294-04:00  INFO 97305 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:32:53.391-04:00  INFO 97305 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12T18:32:53.403-04:00  INFO 97305 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:32:53.492-04:00  INFO 97305 --- [main] org.hibernate.spatial                    : HHH80000004: hibernate-spatial adding function contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:32:53.599-04:00  INFO 97305 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12T18:32:53.602-04:00  INFO 97305 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T18:32:53.725-04:00 ERROR 97305 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-03-12T18:32:53.818-04:00  WARN 97305 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12T18:32:53.838-04:00  WARN 97305 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d3622b19-92d6-464f-a218-ef2ed9bcd50c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-12T18:32:53.887-04:00  INFO 97305 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-03-12T18:32:53.916-04:00 DEBUG 97305 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2025-03-12T18:32:53.937-04:00 DEBUG 97305 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-12T18:32:53.954-04:00  INFO 97305 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6a013bdd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e0bba2f, org.springframework.security.web.context.SecurityContextHolderFilter@3c1df0e9, org.springframework.security.web.header.HeaderWriterFilter@64e3bc2, org.springframework.web.filter.CorsFilter@41d53813, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@768e40af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@165824f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52f118aa, org.springframework.security.web.access.ExceptionTranslationFilter@7bad18f5, org.springframework.security.web.access.intercept.AuthorizationFilter@18c0f025]
+2025-03-12T18:32:53.984-04:00 DEBUG 97305 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-12T18:32:54.004-04:00 DEBUG 97305 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-12T18:32:54.108-04:00  INFO 97305 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-03-12T18:32:54.115-04:00  INFO 97305 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Started AiPoweredCodeReviewApplication in 2.37 seconds (process running for 2.621)
+2025-03-12T18:33:55.581-04:00  INFO 97305 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-12T18:33:55.581-04:00  INFO 97305 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-12T18:33:55.582-04:00 DEBUG 97305 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-12T18:33:55.582-04:00 DEBUG 97305 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-12T18:33:55.582-04:00 DEBUG 97305 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-12T18:33:55.590-04:00 DEBUG 97305 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@36f497b1
+2025-03-12T18:33:55.591-04:00 DEBUG 97305 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4d71ec5b
+2025-03-12T18:33:55.591-04:00 DEBUG 97305 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-12T18:33:55.591-04:00  INFO 97305 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2025-03-12T18:33:55.653-04:00 DEBUG 97305 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review/analyze", parameters={}
+2025-03-12T18:33:55.655-04:00 DEBUG 97305 --- [http-nio-8081-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-12T18:33:55.687-04:00 DEBUG 97305 --- [http-nio-8081-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-03-12T18:33:55.689-04:00 DEBUG 97305 --- [http-nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/code-review/analyze.]
+2025-03-12T18:33:55.691-04:00 DEBUG 97305 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-03-12T18:34:36.685-04:00 DEBUG 97305 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review", parameters={}
+2025-03-12T18:34:36.686-04:00 DEBUG 97305 --- [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yourteamname.aipoweredcodereview.controller.CodeAnalysisController#analyzeCode(Map)
+2025-03-12T18:34:36.732-04:00 DEBUG 97305 --- [http-nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{code=public class Main { public static void main(String[] args) { System.out.println("Hello, World! (truncated)...]
+2025-03-12T18:34:36.780-04:00 DEBUG 97305 --- [http-nio-8081-exec-5] o.s.w.r.f.client.ExchangeFunctions       : [22bc96f8] HTTP POST https://api.openai.com/v1/chat/completions
+2025-03-12T18:34:37.146-04:00 DEBUG 97305 --- [reactor-http-nio-2] org.springframework.web.HttpLogging      : [22bc96f8] Encoding [{messages=[{role=system, content=You are an AI code reviewer. Analyze the given Java code.}, {role=u (truncated)...]
+2025-03-12T18:34:38.733-04:00 DEBUG 97305 --- [reactor-http-nio-2] o.s.w.r.f.client.ExchangeFunctions       : [22bc96f8] [040d5630-1] Response 200 OK
+2025-03-12T18:34:38.747-04:00 DEBUG 97305 --- [reactor-http-nio-2] org.springframework.web.HttpLogging      : [22bc96f8] [040d5630-1] Decoded "{<EOL>  "id": "chatcmpl-BAOwnPi18mTmOfGiIWzY1txFUA8K8",<EOL>  "object": "chat.completion",<EOL>  "created": 1741 (truncated)..."
+2025-03-12T18:34:38.751-04:00 DEBUG 97305 --- [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-03-12T18:34:38.751-04:00 DEBUG 97305 --- [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["{<EOL>  "id": "chatcmpl-BAOwnPi18mTmOfGiIWzY1txFUA8K8",<EOL>  "object": "chat.completion",<EOL>  "created": 1741 (truncated)..."]
+2025-03-12T18:34:38.754-04:00 DEBUG 97305 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-12T18:41:49.398-04:00  INFO 3567 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Starting AiPoweredCodeReviewApplication using Java 17.0.14 with PID 3567 (/Users/aliammar/Desktop/ai-code-review-tool/backend/target/classes started by aliammar in /Users/aliammar/Desktop/ai-code-review-tool/backend)
+2025-03-12T18:41:49.408-04:00  INFO 3567 --- [main] c.y.a.AiPoweredCodeReviewApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-03-12T18:41:49.788-04:00  INFO 3567 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12T18:41:49.800-04:00  INFO 3567 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-03-12T18:41:50.196-04:00  INFO 3567 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-12T18:41:50.205-04:00  INFO 3567 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-12T18:41:50.205-04:00  INFO 3567 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-03-12T18:41:50.258-04:00  INFO 3567 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-12T18:41:50.258-04:00  INFO 3567 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 816 ms
+2025-03-12T18:41:50.317-04:00  INFO 3567 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-12T18:41:50.566-04:00  INFO 3567 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c9b44bf
+2025-03-12T18:41:50.567-04:00  INFO 3567 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-12T18:41:50.619-04:00  INFO 3567 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12T18:41:50.660-04:00  INFO 3567 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-03-12T18:41:50.667-04:00  INFO 3567 --- [main] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2025-03-12T18:41:50.688-04:00  INFO 3567 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-12T18:41:50.819-04:00  WARN 3567 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12T18:41:50.836-04:00  INFO 3567 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:41:50.933-04:00  INFO 3567 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12T18:41:50.947-04:00  INFO 3567 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:41:51.039-04:00  INFO 3567 --- [main] org.hibernate.spatial                    : HHH80000004: hibernate-spatial adding function contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:41:51.145-04:00  INFO 3567 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12T18:41:51.148-04:00  INFO 3567 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T18:41:51.278-04:00 ERROR 3567 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-03-12T18:41:51.369-04:00  WARN 3567 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12T18:41:51.390-04:00  WARN 3567 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f603570a-2417-4181-a4e9-a1fa50126b99
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-12T18:41:51.441-04:00  INFO 3567 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-03-12T18:41:51.472-04:00 DEBUG 3567 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2025-03-12T18:41:51.493-04:00 DEBUG 3567 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-12T18:41:51.511-04:00  INFO 3567 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4cbb11e4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@326dbe25, org.springframework.security.web.context.SecurityContextHolderFilter@1c382179, org.springframework.security.web.header.HeaderWriterFilter@6885f3f7, org.springframework.web.filter.CorsFilter@647aa45c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15a2fddd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@452e2210, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3922b297, org.springframework.security.web.access.ExceptionTranslationFilter@84becbe, org.springframework.security.web.access.intercept.AuthorizationFilter@226e95e9]
+2025-03-12T18:41:51.542-04:00 DEBUG 3567 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-12T18:41:51.564-04:00 DEBUG 3567 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-12T18:41:51.668-04:00  INFO 3567 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-03-12T18:41:51.676-04:00  INFO 3567 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Started AiPoweredCodeReviewApplication in 2.517 seconds (process running for 2.784)
+2025-03-12T18:42:21.498-04:00  INFO 3567 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-12T18:42:21.498-04:00  INFO 3567 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-12T18:42:21.499-04:00 DEBUG 3567 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-12T18:42:21.499-04:00 DEBUG 3567 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-12T18:42:21.499-04:00 DEBUG 3567 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-12T18:42:21.500-04:00 DEBUG 3567 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3e170abe
+2025-03-12T18:42:21.501-04:00 DEBUG 3567 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1af6974c
+2025-03-12T18:42:21.505-04:00 DEBUG 3567 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-12T18:42:21.505-04:00  INFO 3567 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-03-12T18:42:21.534-04:00 DEBUG 3567 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review/analyze", parameters={}
+2025-03-12T18:42:21.536-04:00 DEBUG 3567 --- [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yourteamname.aipoweredcodereview.controller.CodeAnalysisController#analyzeCode(Map)
+2025-03-12T18:42:21.595-04:00 DEBUG 3567 --- [http-nio-8081-exec-2] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.yourteamname.aipoweredcodereview.controller.CodeAnalysisController.analyzeCode(java.util.Map<java.lang.String, java.lang.String>): JSON parse error: Cannot construct instance of `java.util.LinkedHashMap` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}')
+2025-03-12T18:42:21.597-04:00  WARN 3567 --- [http-nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `java.util.LinkedHashMap` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('public class HelloWorld {<EOL>    public static void main(String[] args) {<EOL>        System.out.println("Hello, World!");<EOL>    }<EOL>}')]
+2025-03-12T18:42:21.598-04:00 DEBUG 3567 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-03-12T18:51:28.157-04:00 DEBUG 3567 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review", parameters={}
+2025-03-12T18:51:28.159-04:00 DEBUG 3567 --- [http-nio-8081-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-12T18:51:28.171-04:00 DEBUG 3567 --- [http-nio-8081-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-03-12T18:51:28.175-04:00 DEBUG 3567 --- [http-nio-8081-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/code-review.]
+2025-03-12T18:51:28.175-04:00 DEBUG 3567 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-03-12T18:52:53.855-04:00 DEBUG 3567 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review", parameters={}
+2025-03-12T18:52:53.857-04:00 DEBUG 3567 --- [http-nio-8081-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-12T18:52:53.869-04:00 DEBUG 3567 --- [http-nio-8081-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-03-12T18:52:53.870-04:00 DEBUG 3567 --- [http-nio-8081-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/code-review.]
+2025-03-12T18:52:53.870-04:00 DEBUG 3567 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-03-12T18:58:09.412-04:00  INFO 14776 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Starting AiPoweredCodeReviewApplication using Java 17.0.14 with PID 14776 (/Users/aliammar/Desktop/ai-code-review-tool/backend/target/classes started by aliammar in /Users/aliammar/Desktop/ai-code-review-tool/backend)
+2025-03-12T18:58:09.414-04:00  INFO 14776 --- [main] c.y.a.AiPoweredCodeReviewApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-03-12T18:58:09.803-04:00  INFO 14776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12T18:58:09.817-04:00  INFO 14776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-03-12T18:58:10.226-04:00  INFO 14776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-12T18:58:10.235-04:00  INFO 14776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-12T18:58:10.235-04:00  INFO 14776 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-03-12T18:58:10.271-04:00  INFO 14776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-12T18:58:10.271-04:00  INFO 14776 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 828 ms
+2025-03-12T18:58:10.337-04:00  INFO 14776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-12T18:58:10.602-04:00  INFO 14776 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73a6cc79
+2025-03-12T18:58:10.604-04:00  INFO 14776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-12T18:58:10.656-04:00  INFO 14776 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12T18:58:10.697-04:00  INFO 14776 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-03-12T18:58:10.703-04:00  INFO 14776 --- [main] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2025-03-12T18:58:10.723-04:00  INFO 14776 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-12T18:58:10.856-04:00  WARN 14776 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12T18:58:10.872-04:00  INFO 14776 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:58:10.969-04:00  INFO 14776 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12T18:58:10.981-04:00  INFO 14776 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:58:11.073-04:00  INFO 14776 --- [main] org.hibernate.spatial                    : HHH80000004: hibernate-spatial adding function contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:58:11.179-04:00  INFO 14776 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12T18:58:11.184-04:00  INFO 14776 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T18:58:11.312-04:00 ERROR 14776 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-03-12T18:58:11.405-04:00  WARN 14776 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12T18:58:11.425-04:00  WARN 14776 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e01ebf0d-230e-464b-b448-e6c7b34e965f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-12T18:58:11.485-04:00  INFO 14776 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c0bfe9e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@490fbeaa, org.springframework.security.web.context.SecurityContextHolderFilter@520ec7a7, org.springframework.security.web.header.HeaderWriterFilter@71de1091, org.springframework.web.filter.CorsFilter@35dc849b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d5d77a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71b7e9c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@276aa33f, org.springframework.security.web.access.ExceptionTranslationFilter@5274830e, org.springframework.security.web.access.intercept.AuthorizationFilter@234bfc8c]
+2025-03-12T18:58:11.503-04:00  INFO 14776 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-03-12T18:58:11.531-04:00 DEBUG 14776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2025-03-12T18:58:11.555-04:00 DEBUG 14776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-12T18:58:11.576-04:00 DEBUG 14776 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-12T18:58:11.596-04:00 DEBUG 14776 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-12T18:58:13.777-04:00  WARN 14776 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-12T18:58:13.779-04:00  INFO 14776 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T18:58:13.781-04:00  INFO 14776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-12T18:58:13.786-04:00  INFO 14776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-12T18:58:13.797-04:00  INFO 14776 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-12T18:58:13.807-04:00 ERROR 14776 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-03-12T18:58:55.733-04:00  INFO 15380 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Starting AiPoweredCodeReviewApplication using Java 17.0.14 with PID 15380 (/Users/aliammar/Desktop/ai-code-review-tool/backend/target/classes started by aliammar in /Users/aliammar/Desktop/ai-code-review-tool/backend)
+2025-03-12T18:58:55.735-04:00  INFO 15380 --- [main] c.y.a.AiPoweredCodeReviewApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-03-12T18:58:56.068-04:00  INFO 15380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12T18:58:56.079-04:00  INFO 15380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-03-12T18:58:56.429-04:00  INFO 15380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-12T18:58:56.436-04:00  INFO 15380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-12T18:58:56.437-04:00  INFO 15380 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-03-12T18:58:56.478-04:00  INFO 15380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-12T18:58:56.478-04:00  INFO 15380 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 714 ms
+2025-03-12T18:58:56.529-04:00  INFO 15380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-12T18:58:56.714-04:00  INFO 15380 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c6c302f
+2025-03-12T18:58:56.719-04:00  INFO 15380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-12T18:58:56.768-04:00  INFO 15380 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12T18:58:56.799-04:00  INFO 15380 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-03-12T18:58:56.805-04:00  INFO 15380 --- [main] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2025-03-12T18:58:56.820-04:00  INFO 15380 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-12T18:58:56.924-04:00  WARN 15380 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12T18:58:56.938-04:00  INFO 15380 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:58:57.028-04:00  INFO 15380 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12T18:58:57.039-04:00  INFO 15380 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:58:57.120-04:00  INFO 15380 --- [main] org.hibernate.spatial                    : HHH80000004: hibernate-spatial adding function contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T18:58:57.228-04:00  INFO 15380 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12T18:58:57.231-04:00  INFO 15380 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T18:58:57.361-04:00 ERROR 15380 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-03-12T18:58:57.458-04:00  WARN 15380 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12T18:58:57.480-04:00  WARN 15380 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4e7c048c-fa5f-4dfa-90c9-aac9f7cb7d01
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-12T18:58:57.540-04:00  INFO 15380 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@221cdd87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d66cb, org.springframework.security.web.context.SecurityContextHolderFilter@478c84aa, org.springframework.security.web.header.HeaderWriterFilter@1e288c76, org.springframework.web.filter.CorsFilter@7c79f2cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18d1d137, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f4f6f89, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63551c66, org.springframework.security.web.access.ExceptionTranslationFilter@1ddc8fc, org.springframework.security.web.access.intercept.AuthorizationFilter@2eea4441]
+2025-03-12T18:58:57.559-04:00  INFO 15380 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-03-12T18:58:57.591-04:00 DEBUG 15380 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2025-03-12T18:58:57.617-04:00 DEBUG 15380 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-12T18:58:57.639-04:00 DEBUG 15380 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-12T18:58:57.658-04:00 DEBUG 15380 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-12T18:58:57.773-04:00  INFO 15380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-03-12T18:58:57.781-04:00  INFO 15380 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Started AiPoweredCodeReviewApplication in 2.262 seconds (process running for 2.517)
+2025-03-12T18:59:45.869-04:00  INFO 15380 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-12T18:59:45.870-04:00  INFO 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-12T18:59:45.870-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-12T18:59:45.870-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-12T18:59:45.870-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-12T18:59:45.874-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@15c3849f
+2025-03-12T18:59:45.875-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4468c0ea
+2025-03-12T18:59:45.875-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-12T18:59:45.875-04:00  INFO 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-03-12T18:59:45.929-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review", parameters={}
+2025-03-12T18:59:45.931-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-12T18:59:45.964-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-03-12T18:59:45.967-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/code-review.]
+2025-03-12T18:59:45.968-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-03-12T18:59:45.972-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2025-03-12T18:59:45.973-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-12T18:59:45.991-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-03-12T18:59:45.993-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Mar 12 18:59:45 EDT 2025, status=404, error=Not Found, path=/api/code-review}]
+2025-03-12T18:59:46.015-04:00 DEBUG 15380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-03-12T19:00:00.688-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review", parameters={}
+2025-03-12T19:00:00.690-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-12T19:00:00.698-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-03-12T19:00:00.699-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/code-review.]
+2025-03-12T19:00:00.699-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-03-12T19:00:00.701-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2025-03-12T19:00:00.701-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-12T19:00:00.702-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-03-12T19:00:00.703-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Mar 12 19:00:00 EDT 2025, status=404, error=Not Found, path=/api/code-review}]
+2025-03-12T19:00:00.704-04:00 DEBUG 15380 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-03-12T19:01:17.826-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review", parameters={}
+2025-03-12T19:01:17.832-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-12T19:01:17.835-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-03-12T19:01:17.836-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/code-review.]
+2025-03-12T19:01:17.837-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-03-12T19:01:17.838-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2025-03-12T19:01:17.839-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-03-12T19:01:17.840-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-12T19:01:17.841-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Mar 12 19:01:17 EDT 2025, status=404, error=Not Found, path=/api/code-review}]
+2025-03-12T19:01:17.850-04:00 DEBUG 15380 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-03-12T19:04:17.216-04:00 DEBUG 15380 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/code-review/", parameters={}
+2025-03-12T19:04:17.219-04:00 DEBUG 15380 --- [http-nio-8081-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-12T19:04:17.225-04:00 DEBUG 15380 --- [http-nio-8081-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-03-12T19:04:17.226-04:00 DEBUG 15380 --- [http-nio-8081-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/code-review.]
+2025-03-12T19:04:17.227-04:00 DEBUG 15380 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-03-12T19:04:17.229-04:00 DEBUG 15380 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-12T19:04:17.230-04:00 DEBUG 15380 --- [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-03-12T19:04:17.250-04:00 DEBUG 15380 --- [http-nio-8081-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-03-12T19:04:17.255-04:00 DEBUG 15380 --- [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-03-12T19:04:25.462-04:00 DEBUG 15380 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/code-review", parameters={}
+2025-03-12T19:04:25.463-04:00 DEBUG 15380 --- [http-nio-8081-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-12T19:04:25.464-04:00 DEBUG 15380 --- [http-nio-8081-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-03-12T19:04:25.465-04:00 DEBUG 15380 --- [http-nio-8081-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/code-review.]
+2025-03-12T19:04:25.465-04:00 DEBUG 15380 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-03-12T19:04:25.467-04:00 DEBUG 15380 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-03-12T19:04:25.467-04:00 DEBUG 15380 --- [http-nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-03-12T19:04:25.471-04:00 DEBUG 15380 --- [http-nio-8081-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-03-12T19:04:25.471-04:00 DEBUG 15380 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-03-12T19:06:22.594-04:00  INFO 20400 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Starting AiPoweredCodeReviewApplication using Java 17.0.14 with PID 20400 (/Users/aliammar/Desktop/ai-code-review-tool/backend/target/classes started by aliammar in /Users/aliammar/Desktop/ai-code-review-tool/backend)
+2025-03-12T19:06:22.597-04:00  INFO 20400 --- [main] c.y.a.AiPoweredCodeReviewApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-03-12T19:06:22.967-04:00  INFO 20400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12T19:06:22.979-04:00  INFO 20400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-03-12T19:06:23.388-04:00  INFO 20400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-12T19:06:23.397-04:00  INFO 20400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-12T19:06:23.397-04:00  INFO 20400 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-03-12T19:06:23.446-04:00  INFO 20400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-12T19:06:23.446-04:00  INFO 20400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 821 ms
+2025-03-12T19:06:23.506-04:00  INFO 20400 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-12T19:06:23.755-04:00  INFO 20400 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3313d477
+2025-03-12T19:06:23.760-04:00  INFO 20400 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-12T19:06:23.812-04:00  INFO 20400 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12T19:06:23.853-04:00  INFO 20400 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-03-12T19:06:23.860-04:00  INFO 20400 --- [main] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2025-03-12T19:06:23.879-04:00  INFO 20400 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-12T19:06:24.009-04:00  WARN 20400 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12T19:06:24.028-04:00  INFO 20400 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T19:06:24.132-04:00  INFO 20400 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12T19:06:24.145-04:00  INFO 20400 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T19:06:24.272-04:00  INFO 20400 --- [main] org.hibernate.spatial                    : HHH80000004: hibernate-spatial adding function contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T19:06:24.379-04:00  INFO 20400 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12T19:06:24.383-04:00  INFO 20400 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T19:06:24.513-04:00 ERROR 20400 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-03-12T19:06:24.605-04:00  WARN 20400 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12T19:06:24.626-04:00  WARN 20400 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6993c256-12cf-4936-a43c-68da93f41f00
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-12T19:06:24.686-04:00  INFO 20400 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1ddc8fc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77d58f3a, org.springframework.security.web.context.SecurityContextHolderFilter@f575d2b, org.springframework.security.web.header.HeaderWriterFilter@7d07e04e, org.springframework.web.filter.CorsFilter@1e288c76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c478e4e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e2b37cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@738ed8f5, org.springframework.security.web.access.ExceptionTranslationFilter@36931450, org.springframework.security.web.access.intercept.AuthorizationFilter@221961af]
+2025-03-12T19:06:24.703-04:00  INFO 20400 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-03-12T19:06:24.732-04:00 DEBUG 20400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-03-12T19:06:24.753-04:00 DEBUG 20400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-12T19:06:24.777-04:00 DEBUG 20400 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-12T19:06:24.799-04:00 DEBUG 20400 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-12T19:06:24.908-04:00  INFO 20400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-03-12T19:06:24.915-04:00  INFO 20400 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Started AiPoweredCodeReviewApplication in 2.555 seconds (process running for 2.814)
+2025-03-12T19:06:31.008-04:00  INFO 20400 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-12T19:06:31.008-04:00  INFO 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-12T19:06:31.009-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-12T19:06:31.009-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-12T19:06:31.009-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-12T19:06:31.010-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7eb774c3
+2025-03-12T19:06:31.010-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7fce1069
+2025-03-12T19:06:31.011-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-12T19:06:31.011-04:00  INFO 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-03-12T19:06:31.031-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review", parameters={}
+2025-03-12T19:06:31.032-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yourteamname.aipoweredcodereview.controller.CodeAnalysisController#analyzeCode(Map)
+2025-03-12T19:06:31.086-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{code=public class Main { public static void main(String[] args) { System.out.println("Hello, World! (truncated)...]
+2025-03-12T19:06:31.127-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.w.r.f.client.ExchangeFunctions       : [34cd5f6] HTTP POST https://api.openai.com/v1/chat/completions
+2025-03-12T19:06:31.451-04:00 DEBUG 20400 --- [reactor-http-nio-2] org.springframework.web.HttpLogging      : [34cd5f6] Encoding [{model=gpt-3.5-turbo-1106, max_tokens=500, messages=[{content=You are an AI code reviewer. Analyze t (truncated)...]
+2025-03-12T19:06:32.873-04:00 DEBUG 20400 --- [reactor-http-nio-2] o.s.w.r.f.client.ExchangeFunctions       : [34cd5f6] [9f72d317-1] Response 200 OK
+2025-03-12T19:06:32.886-04:00 DEBUG 20400 --- [reactor-http-nio-2] org.springframework.web.HttpLogging      : [34cd5f6] [9f72d317-1] Decoded "{<EOL>  "id": "chatcmpl-BAPRgjlzOISFtCI8ZpSr975ENdpg4",<EOL>  "object": "chat.completion",<EOL>  "created": 1741 (truncated)..."
+2025-03-12T19:06:32.890-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-03-12T19:06:32.891-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["{<EOL>  "id": "chatcmpl-BAPRgjlzOISFtCI8ZpSr975ENdpg4",<EOL>  "object": "chat.completion",<EOL>  "created": 1741 (truncated)..."]
+2025-03-12T19:06:32.894-04:00 DEBUG 20400 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-12T19:07:57.077-04:00 DEBUG 20400 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review", parameters={}
+2025-03-12T19:07:57.079-04:00 DEBUG 20400 --- [http-nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yourteamname.aipoweredcodereview.controller.CodeAnalysisController#analyzeCode(Map)
+2025-03-12T19:07:57.081-04:00 DEBUG 20400 --- [http-nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{code=public class HelloWorld {<EOL>    public static void main(String[] args) {<EOL>        System.out.prin (truncated)...]
+2025-03-12T19:07:57.083-04:00 DEBUG 20400 --- [http-nio-8081-exec-5] o.s.w.r.f.client.ExchangeFunctions       : [4cd3ea1] HTTP POST https://api.openai.com/v1/chat/completions
+2025-03-12T19:07:57.085-04:00 DEBUG 20400 --- [reactor-http-nio-2] org.springframework.web.HttpLogging      : [4cd3ea1] Encoding [{model=gpt-3.5-turbo-1106, max_tokens=500, messages=[{content=You are an AI code reviewer. Analyze t (truncated)...]
+2025-03-12T19:07:58.866-04:00 DEBUG 20400 --- [reactor-http-nio-2] o.s.w.r.f.client.ExchangeFunctions       : [4cd3ea1] [9f72d317-2] Response 200 OK
+2025-03-12T19:07:58.870-04:00 DEBUG 20400 --- [reactor-http-nio-2] org.springframework.web.HttpLogging      : [4cd3ea1] [9f72d317-2] Decoded "{<EOL>  "id": "chatcmpl-BAPT31C1fA1rlqE1mQujDJPeo98pw",<EOL>  "object": "chat.completion",<EOL>  "created": 1741 (truncated)..."
+2025-03-12T19:07:58.872-04:00 DEBUG 20400 --- [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2025-03-12T19:07:58.872-04:00 DEBUG 20400 --- [http-nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["{<EOL>  "id": "chatcmpl-BAPT31C1fA1rlqE1mQujDJPeo98pw",<EOL>  "object": "chat.completion",<EOL>  "created": 1741 (truncated)..."]
+2025-03-12T19:07:58.873-04:00 DEBUG 20400 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-12T19:15:21.765-04:00  INFO 28281 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Starting AiPoweredCodeReviewApplication using Java 17.0.14 with PID 28281 (/Users/aliammar/Desktop/ai-code-review-tool/backend/target/classes started by aliammar in /Users/aliammar/Desktop/ai-code-review-tool/backend)
+2025-03-12T19:15:21.767-04:00  INFO 28281 --- [main] c.y.a.AiPoweredCodeReviewApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-03-12T19:15:22.139-04:00  INFO 28281 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12T19:15:22.152-04:00  INFO 28281 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-03-12T19:15:22.548-04:00  INFO 28281 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-12T19:15:22.557-04:00  INFO 28281 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-12T19:15:22.557-04:00  INFO 28281 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-03-12T19:15:22.607-04:00  INFO 28281 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-12T19:15:22.607-04:00  INFO 28281 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 811 ms
+2025-03-12T19:15:22.665-04:00  INFO 28281 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-12T19:15:22.906-04:00  INFO 28281 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ec08115
+2025-03-12T19:15:22.910-04:00  INFO 28281 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-12T19:15:22.962-04:00  INFO 28281 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12T19:15:23.002-04:00  INFO 28281 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-03-12T19:15:23.009-04:00  INFO 28281 --- [main] o.h.spatial.integration.SpatialService   : HHH80000001: hibernate-spatial integration enabled : true
+2025-03-12T19:15:23.028-04:00  INFO 28281 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-12T19:15:23.146-04:00  WARN 28281 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12T19:15:23.162-04:00  INFO 28281 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T19:15:23.262-04:00  INFO 28281 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12T19:15:23.274-04:00  INFO 28281 --- [main] org.hibernate.spatial                    : HHH80000003: hibernate-spatial adding type contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T19:15:23.364-04:00  INFO 28281 --- [main] org.hibernate.spatial                    : HHH80000004: hibernate-spatial adding function contributions from : org.hibernate.spatial.dialect.mysql.MySQLDialectContributor
+2025-03-12T19:15:23.473-04:00  INFO 28281 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12T19:15:23.476-04:00  INFO 28281 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T19:15:23.606-04:00 ERROR 28281 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-03-12T19:15:23.696-04:00  WARN 28281 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12T19:15:23.719-04:00  WARN 28281 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 42a43495-01ef-4fb6-b980-7eb6821304b2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-12T19:15:23.779-04:00  INFO 28281 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@738ed8f5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cfb7450, org.springframework.security.web.context.SecurityContextHolderFilter@1e2b37cd, org.springframework.security.web.header.HeaderWriterFilter@f575d2b, org.springframework.web.filter.CorsFilter@478c84aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6033f36c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50b624da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d1deb11, org.springframework.security.web.access.ExceptionTranslationFilter@599310ab, org.springframework.security.web.access.intercept.AuthorizationFilter@77d58f3a]
+2025-03-12T19:15:23.797-04:00  INFO 28281 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-03-12T19:15:23.824-04:00 DEBUG 28281 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2025-03-12T19:15:23.846-04:00 DEBUG 28281 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-12T19:15:23.867-04:00 DEBUG 28281 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-12T19:15:23.885-04:00 DEBUG 28281 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-12T19:15:23.993-04:00  INFO 28281 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-03-12T19:15:24.001-04:00  INFO 28281 --- [main] c.y.a.AiPoweredCodeReviewApplication     : Started AiPoweredCodeReviewApplication in 2.469 seconds (process running for 2.771)
+2025-03-12T19:15:41.553-04:00  INFO 28281 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-12T19:15:41.554-04:00  INFO 28281 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-12T19:15:41.554-04:00 DEBUG 28281 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-12T19:15:41.554-04:00 DEBUG 28281 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-12T19:15:41.554-04:00 DEBUG 28281 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-12T19:15:41.558-04:00 DEBUG 28281 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7d0333c8
+2025-03-12T19:15:41.559-04:00 DEBUG 28281 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@57a0c261
+2025-03-12T19:15:41.560-04:00 DEBUG 28281 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-12T19:15:41.560-04:00  INFO 28281 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-03-12T19:15:41.599-04:00 DEBUG 28281 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/code-review", parameters={}
+2025-03-12T19:15:41.601-04:00 DEBUG 28281 --- [http-nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.yourteamname.aipoweredcodereview.controller.CodeAnalysisController#analyzeCode(Map)
+2025-03-12T19:15:41.653-04:00 DEBUG 28281 --- [http-nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{code=public class HelloWorld {<EOL>    public static void main(String[] args) {<EOL>        System.out.prin (truncated)...]
+2025-03-12T19:15:41.691-04:00 DEBUG 28281 --- [http-nio-8081-exec-2] o.s.w.r.f.client.ExchangeFunctions       : [465c25ef] HTTP POST https://api.openai.com/v1/chat/completions
+2025-03-12T19:15:42.005-04:00 DEBUG 28281 --- [reactor-http-nio-2] org.springframework.web.HttpLogging      : [465c25ef] Encoding [{messages=[{role=system, content=You are an AI code reviewer. Analyze the given Java code.}, {role=u (truncated)...]
+2025-03-12T19:15:42.947-04:00 DEBUG 28281 --- [reactor-http-nio-2] o.s.w.r.f.client.ExchangeFunctions       : [465c25ef] [a3705ab3-1] Response 200 OK
+2025-03-12T19:15:42.961-04:00 DEBUG 28281 --- [reactor-http-nio-2] org.springframework.web.HttpLogging      : [465c25ef] [a3705ab3-1] Decoded "{<EOL>  "id": "chatcmpl-BAPaYX7xQCQfGmZ4oHREBXDzJPhzN",<EOL>  "object": "chat.completion",<EOL>  "created": 1741 (truncated)..."
+2025-03-12T19:15:42.964-04:00 DEBUG 28281 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2025-03-12T19:15:42.965-04:00 DEBUG 28281 --- [http-nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["{<EOL>  "id": "chatcmpl-BAPaYX7xQCQfGmZ4oHREBXDzJPhzN",<EOL>  "object": "chat.completion",<EOL>  "created": 1741 (truncated)..."]
+2025-03-12T19:15:42.967-04:00 DEBUG 28281 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
