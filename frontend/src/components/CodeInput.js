@@ -1,23 +1,21 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./CodeInput.css"; // Import the CSS file
+import "./CodeInput.css";
 
-function CodeInput() {
+function CodeInput({ setFeedback }) {
   const [code, setCode] = useState("");
-  const [feedback, setFeedback] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post(
         "http://localhost:8081/api/code-review",
-        { code }, // Send as an object
+        { code },
         {
           headers: { "Content-Type": "application/json" },
         }
       );
 
-      // Extract the AI-generated content from the response
       const messageContent = response.data.choices[0]?.message?.content || "No feedback received.";
       setFeedback(messageContent);
     } catch (error) {
@@ -27,28 +25,19 @@ function CodeInput() {
   };
 
   return (
-    <div className="CodeReview">
-      <h2>Code Review</h2>
+    <div className="CodeInputWrapper">
       <form onSubmit={handleSubmit}>
         <textarea
-          className="CodeInput-textarea"
+          className="CodeTextarea"
           rows="10"
           cols="50"
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          placeholder="Enter your Java code here"
+          placeholder="Enter your Java code here..."
         />
         <br />
-        <button className="CodeInput-button" type="submit">
-          Submit Code
-        </button>
+        <button className="SubmitButton" type="submit">Submit Code</button>
       </form>
-      {feedback && (
-        <div className="AIFeedback">
-          <h2>AI Feedback</h2>
-          <p>{feedback}</p>
-        </div>
-      )}
     </div>
   );
 }
