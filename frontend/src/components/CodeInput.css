@@ -1,0 +1,108 @@
+/* CodeInput.css */
+.CodeReview {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.CodeReview h2 {
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.CodeInput-textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  resize: vertical;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.CodeInput-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.CodeInput-button {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.CodeInput-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.CodeInput-button:active {
+  transform: translateY(1px);
+}
+
+.AIFeedback {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f4f4f5;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #333;
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+.AIFeedback h2 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.AIFeedback p {
+  margin-bottom: 10px;
+}
+
+.AIFeedback strong {
+  font-weight: bold;
+}
+
+.AIFeedback em {
+  font-style: italic;
+}
+
+.AIFeedback ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.AIFeedback li {
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .CodeInput-textarea {
+    font-size: 0.8rem;
+  }
+
+  .CodeInput-button {
+    font-size: 0.9rem;
+  }
+}

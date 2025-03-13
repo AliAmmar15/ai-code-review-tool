@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./CodeInput.css"; // Import the CSS file
 
 function CodeInput() {
   const [code, setCode] = useState("");
@@ -26,10 +27,11 @@ function CodeInput() {
   };
 
   return (
-    <div>
+    <div className="CodeReview">
       <h2>Code Review</h2>
       <form onSubmit={handleSubmit}>
         <textarea
+          className="CodeInput-textarea"
           rows="10"
           cols="50"
           value={code}
@@ -37,12 +39,14 @@ function CodeInput() {
           placeholder="Enter your Java code here"
         />
         <br />
-        <button type="submit">Submit Code</button>
+        <button className="CodeInput-button" type="submit">
+          Submit Code
+        </button>
       </form>
       {feedback && (
-        <div>
+        <div className="AIFeedback">
           <h2>AI Feedback</h2>
-          <pre>{feedback}</pre>
+          <p>{feedback}</p>
         </div>
       )}
     </div>
