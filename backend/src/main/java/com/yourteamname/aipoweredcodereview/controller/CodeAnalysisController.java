@@ -23,7 +23,7 @@ public class CodeAnalysisController {
     @PostMapping("/code-review")
     public ResponseEntity<String> analyzeCode(@RequestBody Map<String, String> request) {
         String code = request.get("code");
-        String feedback = openAiService.analyzeCode(code).block();
-        return ResponseEntity.ok(feedback); // Ensure this is plain text for JavaFX
+        String feedback = openAiService.analyzeCode(code).block(); // Synchronous execution
+        return ResponseEntity.ok(feedback); // Ensure response is plain text
     }
 }
