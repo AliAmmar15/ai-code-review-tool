@@ -538,3 +538,6 @@ This generated password is for development use only. Your security configuration
 2025-03-13T14:17:36.071-04:00 DEBUG 58634 --- [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
 2025-03-13T14:17:36.071-04:00 DEBUG 58634 --- [http-nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["{<EOL>  "id": "chatcmpl-BAhPbW7cCG5V6mjbd2sdpal1zv7I1",<EOL>  "object": "chat.completion",<EOL>  "created": 1741 (truncated)..."]
 2025-03-13T14:17:36.072-04:00 DEBUG 58634 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-13T14:21:02.119-04:00  INFO 58634 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-13T14:21:02.126-04:00  INFO 58634 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-13T14:21:02.133-04:00  INFO 58634 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

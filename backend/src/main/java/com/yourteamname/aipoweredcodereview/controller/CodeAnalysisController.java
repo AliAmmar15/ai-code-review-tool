@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.yourteamname.aipoweredcodereview.service.OpenAiService;
 
 @RestController
-@RequestMapping("/api/code-review")
+@RequestMapping("/api")
 public class CodeAnalysisController {
 
     private final OpenAiService openAiService;
@@ -20,17 +20,10 @@ public class CodeAnalysisController {
         this.openAiService = openAiService;
     }
 
-    @PostMapping
+    @PostMapping("/code-review")
     public ResponseEntity<String> analyzeCode(@RequestBody Map<String, String> request) {
         String code = request.get("code");
-        if (code == null || code.isEmpty()) {
-            return ResponseEntity.badRequest().body("Code input is empty.");
-        }
-
-        // Call OpenAI API and get raw response
-        String response = openAiService.analyzeCode(code).block();
-
-        // Return AI response as plain text
-        return ResponseEntity.ok(response);
+        String feedback = openAiService.analyzeCode(code).block();
+        return ResponseEntity.ok(feedback); // Ensure this is plain text for JavaFX
     }
 }

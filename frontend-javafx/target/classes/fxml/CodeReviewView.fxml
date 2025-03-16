@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.yourteamname.aipoweredcodereview.ui.CodeReviewApp">
+    <top>
+        <Text text="BugBuster - AI Code Review" style="-fx-font-size: 20px; -fx-fill: white;" />
+    </top>
+    <center>
+        <VBox spacing="10" padding="20">
+            <Text text="Enter your Java code:" style="-fx-font-size: 14px;"/>
+            <TextArea fx:id="codeInput" prefHeight="200" wrapText="true"/>
+            <Button fx:id="submitButton" text="Submit Code" onAction="#handleSubmit"/>
+            <Text text="AI Feedback:" style="-fx-font-size: 14px;"/>
+            <TextArea fx:id="aiFeedback" prefHeight="150" editable="false" wrapText="true"/>
+            <Text fx:id="statusText" style="-fx-font-size: 12px; -fx-fill: yellow;" />
+        </VBox>
+    </center>
+</BorderPane>
