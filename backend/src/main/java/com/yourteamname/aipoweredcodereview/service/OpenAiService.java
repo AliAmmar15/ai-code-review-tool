@@ -1,59 +1,61 @@
 package com.yourteamname.aipoweredcodereview.service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
-
-import reactor.core.publisher.Mono;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class OpenAiService {
 
-    private final WebClient webClient;
-    private final String openAiApiKey;
+    @Value("${openai.api.key}")
+    private String apiKey;
 
-    public OpenAiService(WebClient.Builder webClientBuilder) {
-        this.webClient = webClientBuilder.baseUrl("https://api.openai.com/v1").build();
-        
-        // Load API key from environment variables
-        this.openAiApiKey = System.getenv("OPENAI_API_KEY");
+    private final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
+    private final RestTemplate restTemplate = new RestTemplate();
 
-        if (this.openAiApiKey == null || this.openAiApiKey.isEmpty()) {
-            throw new IllegalStateException("OpenAI API key is missing! Ensure it's set in the environment variables.");
-        }
-    }
+    public String analyzeCode(String code) {
+        try {
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_JSON);
+            headers.setBearerAuth(apiKey);
 
-    public Mono<String> analyzeCode(String code) {
-        return webClient.post()
-            .uri("/chat/completions")
-            .header("Authorization", "Bearer " + openAiApiKey)
-            .header("Content-Type", "application/json")
-            .bodyValue(Map.of(
-                "model", "gpt-3.5-turbo-1106",
-                "messages", List.of(
-                    Map.of("role", "system", "content", "You are an advanced AI code reviewer specializing in Java. Analyze the given Java code thoroughly, identifying bugs, inefficiencies, or deviations from best practices. Provide short and easy-to-understand feedback."),
-                    Map.of("role", "user", "content", code)
-                ),
-                "max_tokens", 500
-            ))
-            .retrieve()
-            .onStatus(status -> status.value() >= 400, response ->
-                response.bodyToMono(String.class).flatMap(errorBody -> {
-                    System.err.println("OpenAI API Error: " + errorBody);
-                    return Mono.error(new RuntimeException("OpenAI API Error: " + errorBody));
-                })
-            )
-            .bodyToMono(Map.class)
-            .map(response -> {
-                // Extract the actual AI response content
-                List<Map<String, Object>> choices = (List<Map<String, Object>>) response.get("choices");
-                if (choices != null && !choices.isEmpty()) {
-                    Map<String, Object> message = (Map<String, Object>) choices.get(0).get("message");
-                    return message.get("content").toString();
+            Map<String, Object> message = new HashMap<>();
+            message.put("role", "user");
+            message.put("content", "Please review this code:\n" + code);
+
+            Map<String, Object> requestBody = new HashMap<>();
+            requestBody.put("model", "gpt-3.5-turbo");
+            requestBody.put("messages", List.of(message));
+            requestBody.put("temperature", 0.7);
+
+            HttpEntity<Map<String, Object>> request = new HttpEntity<>(requestBody, headers);
+
+            ResponseEntity<Map> response = restTemplate.postForEntity(
+                OPENAI_API_URL,
+                request,
+                Map.class
+            );
+
+            if (response.getBody() != null) {
+                List<Map<String, Object>> choices = (List<Map<String, Object>>) response.getBody().get("choices");
+                if (!choices.isEmpty()) {
+                    Map<String, Object> choice = choices.get(0);
+                    Map<String, String> messageResponse = (Map<String, String>) choice.get("message");
+                    return messageResponse.get("content");
                 }
-                return "Error: No response from AI.";
-            });
+            }
+
+            return "No analysis available.";
+        } catch (Exception e) {
+            return "Error analyzing code: " + e.getMessage();
+        }
     }
 }

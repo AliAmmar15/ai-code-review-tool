@@ -1,29 +1,34 @@
 package com.yourteamname.aipoweredcodereview.controller;
 
-import java.util.Map;
-
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import com.yourteamname.aipoweredcodereview.model.CodeReviewRequest;
 import com.yourteamname.aipoweredcodereview.service.OpenAiService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class CodeAnalysisController {
 
     private final OpenAiService openAiService;
 
+    @Autowired
     public CodeAnalysisController(OpenAiService openAiService) {
         this.openAiService = openAiService;
     }
 
-    @PostMapping("/code-review")
-    public ResponseEntity<String> analyzeCode(@RequestBody Map<String, String> request) {
-        String code = request.get("code");
-        String feedback = openAiService.analyzeCode(code).block(); // Synchronous execution
-        return ResponseEntity.ok(feedback); // Ensure response is plain text
+    @PostMapping("/analyze")
+    public ResponseEntity<String> analyzeCode(@RequestBody CodeReviewRequest request) {
+        if (request.getCode() == null || request.getCode().isEmpty()) {
+            return ResponseEntity.badRequest().body("Error: Code is missing in request.");
+        }
+        try {
+            // Use your OpenAI service to analyze the code
+            String analysis = openAiService.analyzeCode(request.getCode());
+            return ResponseEntity.ok(analysis);
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().body("Error analyzing code: " + e.getMessage());
+        }
     }
 }

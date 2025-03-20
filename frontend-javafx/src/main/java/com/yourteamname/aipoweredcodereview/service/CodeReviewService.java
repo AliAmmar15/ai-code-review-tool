@@ -1,32 +1,56 @@
 package com.yourteamname.aipoweredcodereview.service;
 
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class CodeReviewService {
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    private static final String BACKEND_URL = "http://localhost:8080/api/code-review";
-
-    public static String sendCodeForAnalysis(String code) {
+    public String reviewCode(String code) {
         try {
-            String jsonPayload = "{ \"code\": \"" + code.replace("\"", "\\\"") + "\" }";
-            HttpClient client = HttpClient.newHttpClient();
+            URL url = new URL("http://localhost:8080/api/analyze");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setDoOutput(true);
 
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(BACKEND_URL))
-                    .header("Content-Type", "application/json")
-                    .POST(HttpRequest.BodyPublishers.ofString(jsonPayload, StandardCharsets.UTF_8))
-                    .build();
+            // Create request body
+            Map<String, String> requestBody = new HashMap<>();
+            requestBody.put("code", code);
 
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            return response.body();
+            // Convert to JSON using Jackson
+            String jsonInputString = objectMapper.writeValueAsString(requestBody);
+
+            // Send request
+            try (OutputStream os = conn.getOutputStream()) {
+                byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
+                os.write(input, 0, input.length);
+            }
+
+            // Handle response
+            if (conn.getResponseCode() >= 400) {
+                try (BufferedReader br = new BufferedReader(
+                        new InputStreamReader(conn.getErrorStream(), StandardCharsets.UTF_8))) {
+                    return "Error: " + br.lines().collect(Collectors.joining("\n"));
+                }
+            }
+
+            try (BufferedReader br = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
+                return br.lines().collect(Collectors.joining("\n"));
+            }
 
         } catch (Exception e) {
-            e.printStackTrace();
-            return "Error: " + e.getMessage();
+            return "Error occurred: " + e.getMessage();
         }
     }
 }

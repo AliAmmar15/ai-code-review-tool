@@ -21,7 +21,7 @@ public class AiPoweredCodeReviewApplication {
             System.err.println("❌ ERROR: OPENAI_API_KEY is not set. Please check your .env file.");
         } else {
             System.setProperty("openai.api.key", apiKey);
-            System.out.println("✅ Successfully loaded API Key.");
+            System.out.println("Successfully loaded API Key.");
         }
 
         SpringApplication.run(AiPoweredCodeReviewApplication.class, args);

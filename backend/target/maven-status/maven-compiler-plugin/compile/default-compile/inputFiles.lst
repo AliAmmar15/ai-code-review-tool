@@ -4,3 +4,4 @@
 /Users/aliammar/Desktop/ai-code-review-tool/backend/src/main/java/com/yourteamname/aipoweredcodereview/AiPoweredCodeReviewApplication.java
 /Users/aliammar/Desktop/ai-code-review-tool/backend/src/main/java/com/yourteamname/aipoweredcodereview/config/WebSecurityConfig.java
 /Users/aliammar/Desktop/ai-code-review-tool/backend/src/main/java/com/yourteamname/aipoweredcodereview/controller/CodeAnalysisController.java
+/Users/aliammar/Desktop/ai-code-review-tool/backend/src/main/java/com/yourteamname/aipoweredcodereview/model/CodeReviewRequest.java
