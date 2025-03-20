@@ -20,7 +20,7 @@ Manual code review is time-consuming and prone to human oversight. By automating
 ### Key Features
 - **Automated Java Code Analysis** – Detect syntax errors, inefficiencies, and bad practices.
 - **Structured Feedback** – Provide suggestions for improving code quality.
-- **Web-Based Interface** – Users can submit their code through a React.js frontend.
+- **JavaFX Interface** – Users can submit their code through the frontend.
 - **Spring Boot Backend** – Processes code and delivers analysis results.
 - **Database Storage** – Save analysis history using PostgreSQL/MySQL.
 - **GitHub Integration (Optional)** – Automate code reviews for pull requests.
@@ -33,7 +33,7 @@ Manual code review is time-consuming and prone to human oversight. By automating
 ## Technologies & Development Plan
 
 ### Tech Stack
-- **Frontend:** React.js (for a responsive web interface)
+- **Frontend:** JavaFX
 - **Backend:** Spring Boot (handles API requests and logic)
 - **Database:** PostgreSQL/MySQL (stores code submissions and feedback)
 - **Analysis Engine:** Rule-based Java logic, OpenAI API (optional for AI-powered analysis)
@@ -41,7 +41,7 @@ Manual code review is time-consuming and prone to human oversight. By automating
 
 ### Project Timeline
 - **Week 1-2:** Set up backend (Spring Boot), define APIs, and integrate database.
-- **Week 3:** Develop frontend (React.js) and connect to backend.
+- **Week 3:** Develop frontend (JavaFX) and connect to backend.
 - **Week 4:** Implement code analysis logic for detecting errors and best practices.
 - **Week 5:** Add GitHub integration, finalize testing, fix bugs, and deploy.
 
@@ -51,7 +51,7 @@ Manual code review is time-consuming and prone to human oversight. By automating
 - ~12 hours (API design, data handling, authentication)
 
 ### Frontend Development
-- ~8 hours (React.js UI and API integration)
+- ~8 hours (JavaFX UI and API integration)
 
 ### Analysis Engine
 - ~15 hours (Java rule-based logic and optimizations)
