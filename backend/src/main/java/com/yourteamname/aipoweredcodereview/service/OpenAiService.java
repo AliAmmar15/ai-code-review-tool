@@ -29,7 +29,7 @@ public class OpenAiService {
 
             Map<String, Object> message = new HashMap<>();
             message.put("role", "user");
-            message.put("content", "Please review this code:\n" + code);
+            message.put("content", "You are an AI-powered code review assistant. Please analyze the following code and provide a comprehensive review. Start by identifying any bugs or potential errors that could affect functionality or cause unexpected behavior. Then, examine the code for performance issues, such as inefficient logic, unnecessary memory consumption, or slow operations. Point out any areas where best practices or clean coding principles (such as DRY, KISS, or SOLID) are not followed. If there are any security concerns—like unsafe input handling, insecure data storage, or potential vulnerabilities—highlight them clearly. Suggest actionable improvements to enhance the code’s quality, maintainability, and readability. This may include better naming, clearer structure, or possible refactoring. Also, comment on the overall readability, including formatting, indentation, and use of comments. If possible, give the code a quality score from 1 to 10 and summarize your main feedback points. Structure your response in organized sections so it's easy for the developer to review and apply. Then provide the improved code, Here's the code for analysis:\n" + code);
 
             Map<String, Object> requestBody = new HashMap<>();
             requestBody.put("model", "gpt-3.5-turbo");
