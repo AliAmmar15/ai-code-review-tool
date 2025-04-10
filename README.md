@@ -1,11 +1,11 @@
-# BugBusters – AI Code Review Tool
+# AI Code Review Tool
 
-**Team Name:** OptiCode  
+**Team Name:** BugBuster  
 **Team Member:** Ali Ammar
 
-## What is BugBusters?
+## What is AI Code Review Tool?
 
-BugBusters is a tool that checks Java code for bugs, bad practices, and ways to make it better. It gives helpful feedback so you can improve your code faster.
+AI code review tool is a tool that checks code for bugs, bad practices, and ways to make it better. It gives helpful feedback so you can improve your code faster.
 
 ## Who is it for?
 
